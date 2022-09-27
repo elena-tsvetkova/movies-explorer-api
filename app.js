@@ -3,10 +3,11 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const router = require('./routes/app');
 const { errors } = require('celebrate');
+const router = require('./routes/index');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorsHandler = require('./middlewares/errorsHandler');
+const helmet = require('helmet');
 
 const { NODE_ENV, PORT = 3000, DB_CONNECT } = process.env;
 const app = express();
@@ -16,6 +17,7 @@ mongoose.connect(NODE_ENV === 'production' ? DB_CONNECT : 'mongodb://0.0.0.0:270
   useUnifiedTopology: true,
 });
 
+app.use(helmet());
 app.use(cors());
 app.options('*', cors());
 app.use(bodyParser.json());

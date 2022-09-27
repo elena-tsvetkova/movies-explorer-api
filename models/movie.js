@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const BadRequest = require("../errors/BadRequest");
+const validator = require('validator');
+const BadRequest = require('../errors/BadRequest');
 
 const movieSchema = new mongoose.Schema({
   country: {
