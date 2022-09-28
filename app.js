@@ -12,7 +12,7 @@ const helmet = require('helmet');
 const { NODE_ENV, PORT = 3000, DB_CONNECT } = process.env;
 const app = express();
 
-mongoose.connect(NODE_ENV === 'production' ? DB_CONNECT : 'mongodb://0.0.0.0:27017/diplomdb', {
+mongoose.connect(NODE_ENV === 'production' ? DB_CONNECT : 'mongodb://0.0.0.0:27017/moviesdb', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
