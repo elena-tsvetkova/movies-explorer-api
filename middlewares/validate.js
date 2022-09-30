@@ -32,13 +32,13 @@ module.exports.moviesCreateValidate = celebrate({
     description: Joi.string().required(),
     image: Joi.string().required().custom((value, helpers) => {
       if (!validator.isURL(value)) {
-        return helpers.error('Ссылка некорректна');
+        return helpers.message({ message: 'Ссылка некорректна' });
       }
       return value;
     }),
     trailerLink: Joi.string().required().custom((value, helpers) => {
       if (!validator.isURL(value)) {
-        return helpers.error('Ссылка некорректна');
+        return helpers.message({ message: 'Ссылка некорректна' });
       }
       return value;
     }),
@@ -46,7 +46,7 @@ module.exports.moviesCreateValidate = celebrate({
     nameEN: Joi.string().required(),
     thumbnail: Joi.string().required().custom((value, helpers) => {
       if (!validator.isURL(value)) {
-        return helpers.error('Ссылка некорректна');
+        return helpers.message({ message: 'Ссылка некорректна' });
       }
       return value;
     }),

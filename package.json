@@ -1,26 +1,24 @@
 {
-  "name": "express-mesto-gha",
+  "name": "movies-explorer-api",
   "version": "1.0.0",
-  "description": "[![Tests](https://github.com/yandex-praktikum/express-mesto-gha/actions/workflows/tests-13-sprint.yml/badge.svg)](https://github.com/yandex-praktikum/express-mesto-gha/actions/workflows/tests-13-sprint.yml) [![Tests](https://github.com/yandex-praktikum/express-mesto-gha/actions/workflows/tests-14-sprint.yml/badge.svg)](https://github.com/yandex-praktikum/express-mesto-gha/actions/workflows/tests-14-sprint.yml) # Проект Mesto фронтенд + бэкенд",
+  "description": "Diploma",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint .",
     "start": "node app.js",
-
     "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elena-tsvetkova/express-mesto-gha.git"
+    "url": "git+https://github.com/elena-tsvetkova/movies-explorer-api"
   },
   "keywords": [],
   "author": "tsvetkova",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/elena-tsvetkova/express-mesto-gha/issues"
+    "url": "https://github.com/elena-tsvetkova/movies-explorer-api/issues"
   },
-  "homepage": "https://github.com/elena-tsvetkova/express-mesto-gha#readme",
+  "homepage": "https://github.com/elena-tsvetkova/movies-explorer-api#readme",
   "devDependencies": {
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
